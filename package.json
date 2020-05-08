@@ -1,9 +1,11 @@
 {
   "name": "@rahulnkvaidya/rps-function",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/rahulnkvaidya/rps-function/issues"
   },
-  "homepage": "https://github.com/rahulnkvaidya/rps-function#readme"
+  "homepage": "https://github.com/rahulnkvaidya/rps-function#readme",
+  "dependencies": {
+    "ckeditor4-react": "^1.1.0",
+    "react": "^16.13.1"
+  }
 }
