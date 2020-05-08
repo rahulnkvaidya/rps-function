@@ -1,6 +1,6 @@
 {
-  "name": "rps-function",
-  "version": "1.0.0",
+  "name": "@rahulnkvaidya/rps-function",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "publishConfig": { "registry": "https://npm.pkg.github.com/" },
@@ -8,8 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rahulnkvaidya/rps-function.git"
+    "url": "git://github.com/rahulnkvaidya/rps-function.git"
   },
   "author": "Rahul Vaidya",
   "license": "ISC",

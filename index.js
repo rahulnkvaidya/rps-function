@@ -18,19 +18,17 @@ var rps = {
     };
     return final;
   },
-  getPager: function (totalItems, currentPage, pageSize, callback) {
+  getPager: function (totalItems, currentPage, pageSize) {
     //  console.log(totalItems + "/" + currentPage + "/" + pageSize);
     // calculate total pages
-    var totalItems = parseInt(totalItems);
+    totalItems = parseInt(totalItems);
     let totalPages = Math.ceil(totalItems / pageSize);
 
     // ensure current page isn't out of range
     if (currentPage < 1) {
       currentPage = 1;
-      const curPage = currentPage;
     } else if (currentPage > totalPages) {
       currentPage = totalPages;
-      const curPage = currentPage;
     }
 
     let startPage, endPage;
@@ -60,7 +58,7 @@ var rps = {
       previousIndex = 0;
     } else {
       previousIndex = Math.min(startIndex - pageSize);
-      console.log('previous id' + previousIndex)
+      //  console.log('previous id'+ previousIndex)
     }
     let nextIndex = endIndex + 1;
     // if (startIndex === 0) {
@@ -78,18 +76,18 @@ var rps = {
     var next = currentPage + 1;
     if (next <= totalPages) {
       // less than 10 total pages so show all
-      next = next;
     } else {
       next = null;
     }
     var previousPage = currentPage - 1;
     if (previousPage >= 1) {
       // less than 10 total pages so show all
-      previousPage = previousPage;
+      // previousPage = previousPage;
     } else {
       previousPage = null;
     }
-    return callback({
+    // return object with all pager properties required by the view
+    return {
       totalItems: totalItems,
       currentPage: currentPage,
       pageSize: pageSize,
@@ -103,7 +101,7 @@ var rps = {
       previousIndex: previousIndex,
       nextIndex: nextIndex,
       pages: pages
-    });
+    };
   }
 }
 module.exports = rps
